@@ -1,0 +1,11 @@
+28.GEEKS FOR GEEKS 
+class Solution:	
+    #Function to reverse every sub-array group of size k.
+	def reverseInGroups(self, arr, N, K):
+		l=[]
+		for i in range(0,N,K):
+		    low=i
+		    high=min(i+K,N)
+		    l.extend(arr[low:high][::-1])
+		arr[:]=l[:]
+		
